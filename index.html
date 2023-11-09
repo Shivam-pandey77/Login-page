@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>LogIn</title>
+</head>
+<body>
+    <div class="box">
+        <div class="main">
+            <h2>Login</h2>
+            <div class="emailcheck">
+                <p>Email</p>
+                <input type="email"  id="email" required>
+            </div>
+            <div class="passcheck">
+                <p>Password</p>
+                <input type="password"  id="password" required>
+            </div>
+            <div class="check">
+                <input type="checkbox" id="remember"> 
+                <p >&nbsp;&nbsp;Remeber me</p>
+                <a href="#" class="forgot">Forgot password?</a>
+            </div>
+            <div class="login">
+            <button type="submit" id="btn">Login</button>
+           </div>
+
+            <div class="signup"> <p>Dont have an account? &nbsp;&nbsp; </p><a href="#" class="register">Register</a></div>
+
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", check);
+
+        function check()  {
+            let pass= document.getElementById("password").value;
+            let user= document.getElementById("email").value;
+
+            if(user == "") {
+            alert("Username is required");
+            }
+
+            if(pass == "") {
+            alert("Password is required");
+            }
+
+        }
+    </script>
+
+</body>
+</html>
